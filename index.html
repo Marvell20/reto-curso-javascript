@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculadora de ahorro</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span>A H O R R O</span>
+            <span>A P P</span>
+        </h1>
+    </header>
+    <br>
+        <div class="container">
+            <div class="left-card">
+                <div class="space">
+                    <span>Ingresos mensuales</span>
+                    <br>
+                    <input type="number" placeholder="0" class="input-icono" id="InputIngresos">
+                </div>
+                <br>
+                <div>
+                    <span>Gastos</span>
+                    <br>
+                    <input type="number" placeholder="0" class="input-icono" id="InputGastos">
+                </div>
+                <br>
+                <div>
+                    <span>Porcentaje de ahorro</span>
+                </div>
+                <div class="row">
+                    <div>
+                        <button class="input-button" id="Input5" value="5" onclick="capacidadDeAhorro(this)">5%</button>
+                        <button class="input-button" id="Input10" value="10" onclick="capacidadDeAhorro(this)">10%</button>
+                        <button class="input-button" id="Input15" value="15" onclick="capacidadDeAhorro(this)">15%</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <button class="input-button" id="Input20" value="25" onclick="capacidadDeAhorro(this)">25%</button>
+                        <button class="input-button" id="Input25" value="50" onclick="capacidadDeAhorro(this)">50%</button>
+                        <input type="number" placeholder="Porcentaje" class="custom-percent" id="InputCustomPercent" onchange="capacidadDeAhorro(null)">
+                    </div>
+                </div>
+            </div>
+            <div class="right-card">
+                <div>Disponible mensual</div>
+                <textarea id="disponible" readonly>$0.00</textarea>
+                <div>Total ahorro mensual</div>
+                <textarea id="ahorroMensual" readonly>$0.00</textarea>
+                <div>Total ahorro anual</div>
+                <textarea id="ahorroAnual" readonly>$0.00</textarea>
+                <br>
+                <button class="input-button-right" onclick="limpiar()">LIMPIAR</button>
+            </div>
+        </div>
+        <div>
+            <p id="error"></p>
+        </div>
+    <script src="./ahorro.js"></script>
+</body>
+</html>
